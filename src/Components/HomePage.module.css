@@ -1,0 +1,75 @@
+.MainContainer {
+    background-image: url("./Images/BgcImage.png");
+    background-repeat: no-repeat;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .card {
+    width: 30%;
+    background: #ffffff;
+    margin: auto;
+    margin-top: 8%;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+    padding: 0px;
+    padding-bottom: 20px;
+  }
+  
+  .card_top {
+    background: #f6f6f6;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    margin-top: 0px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  
+.card_bottom {
+  margin-top: 0px;
+  padding: 0px 30px;
+  height: 400px;
+  overflow-x: auto;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.divStyle{
+  display: flex;
+  margin-top: 0px;
+  align-items: center;
+  gap: 20px;
+  margin: 0px;
+  padding: 5px;
+  border-bottom: solid 2px rgb(203, 201, 201);
+  }
+
+.divStyle > img {
+  border-radius: 25px;
+  width: 35px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.divStyle > p {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(93, 89, 89);
+}
+
+.divStyle > p:hover {
+  color: rgb(246, 11, 11);
+}
+  
+  @media all and (min-width:0px) and (max-width:900px){
+    .card {
+      width: 70%;
+      margin-top: 60px;
+    }
+  }

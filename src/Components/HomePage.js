@@ -2,6 +2,7 @@ import React from 'react';
 import axios from "axios";
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import style from "./HomePage.module.css";
 
  const HomePage =  () => {
     const [data, setData] = useState([]);
@@ -18,13 +19,25 @@ const getUser = async()=>
          getUser();
       }, []);
   return (
-    <div>
-      <div >
-        <h1 >Select an account</h1>
+<div className={style.MainContainer}>
+      <div className={style.card}>
+        <h1 className={style.card_top} >Select an account</h1>
         
-        {data.map((res)=>{
-            return <Link to={`/${res.id}`}><h1 key={res.id}>{res.name}</h1>
-             </Link>} )}
+        
+<div className={style.card_bottom}>
+     {
+        data.map((val) => (
+          <div key={val.id}>
+            <Link style={{textDecoration:"none"}} to={`/${val.id}`}>
+              <div className={style.divStyle}>
+                <img src={val.profilepicture} alt="profile Pic" />
+                <p>{val.name}</p>
+              </div>
+            </Link>
+             <br />
+          </div>
+        ))}
+    </div>
            
       </div>
     </div>
