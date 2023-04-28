@@ -1,7 +1,9 @@
 import React,{useEffect,useState} from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-
+import style from './UserDetails.module.css';
+import SideNav from "./SideNav";
+import Main from "./Main"
 
  const UserDetails = () => {
 
@@ -22,11 +24,29 @@ import { useParams } from 'react-router-dom';
 
   return (
     <div>
-            {user.map((res)=>{
-            return <h1 key={res.id}>{res.name}</h1>
-            } )}
+      <div className={style.HomeMain}>
+      
+        <SideNav />
+         { user.map((val) => (
+                <div className={style.profile_top} key={val.id}>
+                  <div>
+                    <h2>Profile</h2>
+                    <div className={style.profile}>
+                      <img
+                        src={val.profilepicture}
+                        alt="profile pic"
+                      />
+                      <p>{val.name}</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <Main {...val}/>
+            </div>
+          ))}
+      </div>
     </div>
-  )
-}
+  );
+};
+  
 
 export default UserDetails
