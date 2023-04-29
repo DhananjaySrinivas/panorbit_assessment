@@ -2,7 +2,7 @@ import React from 'react';
 import axios from "axios";
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import style from "./HomePage.module.css";
+import style from "../CSS/HomePage.module.css";
 
  const HomePage =  () => {
     const [data, setData] = useState([]);

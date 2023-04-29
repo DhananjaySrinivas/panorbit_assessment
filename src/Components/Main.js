@@ -1,5 +1,5 @@
 import React from "react";
-import style from './Main.module.css';
+import style from '../CSS/Main.module.css';
 
 const Main = (props) => {
   return (
@@ -49,7 +49,7 @@ const Main = (props) => {
           </h2>
         </div>
         <iframe
-          width="550"
+          width="450"
           height="300"
           className={style.Map}
           src={`https://maps.google.com/maps?q=${props.address.street},t=&z=13&ie=UTF8&iwloc=&output=embed`}

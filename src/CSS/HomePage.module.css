@@ -1,5 +1,5 @@
 .MainContainer {
-    background-image: url("./Images/BgcImage.png");
+    background-image: url("../Components/Images/BgcImage.png");
     background-repeat: no-repeat;
     margin: auto;
     display: flex;
