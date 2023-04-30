@@ -1,5 +1,6 @@
 import React from "react";
 import style from '../CSS/Main.module.css';
+import Chat from "./Chat";
 
 const Main = (props) => {
   return (
@@ -57,6 +58,9 @@ const Main = (props) => {
         <div className={style.geo}>
           <p>Lat : <span>{props.address.geo.lat}</span></p>
           <p>Lng : <span>{props.address.geo.lng}</span></p>
+        </div>
+        <div>
+          <Chat/>
         </div>
       </div>
     </div>

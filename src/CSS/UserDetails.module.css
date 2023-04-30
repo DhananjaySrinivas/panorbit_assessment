@@ -62,3 +62,30 @@
     font-weight: 500;
     color: rgba(56, 55, 55, 0.822);
   }
+  
+.active {
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0%;
+}
+
+.active::after {
+  content: ">";
+  margin-left: 0px;
+  font-weight: bold;
+  background: #ffffff;
+  color: grey;
+  border-radius: 50px 1px 1px 50px;
+  padding: 6px 7px;
+  margin-right: -56px;
+}
+
+.notActive {
+  color: #b3afaf;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
